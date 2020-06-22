@@ -16,6 +16,9 @@
             </asp:Panel>
         </div>
         <div style="float:left;width:35%" ID="Przedmioty" runat="server">
+            <p>Aby utworzyć nowy przedmiot wpisz nazwę przedmioty i kliknij przycisk "Utwórz przedmiot".</p>
+            <asp:TextBox runat="server" ID="new_lesson"></asp:TextBox><asp:Button runat="server" ID="create_lesson" Text="Utwórz przedmiot" OnClick="create_lesson_Click" />
+            <asp:Label ID="info" Text="<p>Wybierz przedmiot</p>" runat="server"/>
         </div>
         <div style="float:left;width:65%">
             <asp:Button ID="new" Text="Nowy" runat="server" OnClick="new_Click" />

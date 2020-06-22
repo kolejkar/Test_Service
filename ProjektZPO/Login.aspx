@@ -21,8 +21,8 @@
             <img src="like.jpg" alt="Like" />
         </div>
         <div id="Home">
-        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" TitleText="Logowanie do serwisu:">
-        </asp:Login>
+        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" TitleText="Logowanie do serwisu:"></asp:Login>
+            <p class="rejestr">Jeśli nie posiadasz konta: <a href="Register.aspx">Rejestracja do serwisu</a></p>
         </div>
     </form>
 </body>

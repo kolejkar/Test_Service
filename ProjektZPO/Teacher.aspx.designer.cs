@@ -49,6 +49,33 @@ namespace ProjektZPO {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Przedmioty;
         
         /// <summary>
+        /// Kontrolka new_lesson.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox new_lesson;
+        
+        /// <summary>
+        /// Kontrolka create_lesson.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button create_lesson;
+        
+        /// <summary>
+        /// Kontrolka info.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label info;
+        
+        /// <summary>
         /// Kontrolka new.
         /// </summary>
         /// <remarks>
