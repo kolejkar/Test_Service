@@ -19,6 +19,13 @@ namespace ProjektZPO
                 link.ID = pr.nazwa;
                 link.Click += new EventHandler(Przedmiot_Click);
                 Przedmioty.Controls.Add(link);
+                Przedmioty.Controls.Add(new LiteralControl("<br />"));
+            }
+            if (przedmiot == null && Login.admin.przedmioty.Count > 0)
+            {
+                przedmiot = Login.admin.przedmioty[0].nazwa;
+                info.Text = String.Format("<p>Przedmot: {0}</p>", przedmiot);
+                ShowStudents();
             }
         }
 
@@ -32,6 +39,7 @@ namespace ProjektZPO
             LinkButton button = sender as LinkButton;
             //Response.Write("<script>alert('"+button.Text+"');</script>");
             przedmiot = button.Text;
+            info.Text = String.Format("<p>Przedmot: {0}</p>", przedmiot);
             ShowStudents();
         }
 
@@ -122,6 +130,16 @@ namespace ProjektZPO
                 lista.Items.RemoveAt(lista.SelectedIndex);
                 student.oceny.Remove(student.oceny.Find(p => p.przedmiot.nazwa == przedmiot));
             }
+        }
+
+        protected void create_lesson_Click(object sender, EventArgs e)
+        {
+            przedmiot = null;
+            Przedmiot pr = new Przedmiot();
+            pr.nazwa = new_lesson.Text;
+            Login.admin.przedmioty.Add(pr);
+            Response.Write("<script>alert('Przedmiot dodany.');</script>");
+            Response.Redirect(Request.RawUrl);
         }
     }
 }

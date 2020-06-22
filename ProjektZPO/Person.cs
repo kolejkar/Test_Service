@@ -32,6 +32,16 @@ namespace ProjektZPO
             //przedmioty = new List<Przedmiot>();
             oceny = new List<Ocena>();
         }
+
+        public Student(Person person, int indeks)
+        {
+            oceny = new List<Ocena>();
+            imie = person.imie;
+            nazwisko = person.nazwisko;
+            email = person.email;
+            haslo = person.haslo;
+            nr_indeksu = indeks;
+        }
     }
 
     public class Wykladowca : Person
@@ -39,6 +49,15 @@ namespace ProjektZPO
         public Wykladowca()
         {
             przedmioty = new List<Przedmiot>();
+        }
+
+        public Wykladowca(Person person)
+        {
+            przedmioty = new List<Przedmiot>();
+            imie = person.imie;
+            nazwisko = person.nazwisko;
+            email = person.email;
+            haslo = person.haslo;
         }
 
         public List<Przedmiot> przedmioty;
